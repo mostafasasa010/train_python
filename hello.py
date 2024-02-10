@@ -1,15 +1,26 @@
-# Data Types
+# --------------------------------------
+# -- Variables --
+# ---------------
+# Syntax => [Variable Name] [Assignment Operator] [Value]
+#
+# Name Convention and Rules
+# [1] Can Start With (a-z A-Z) Or Underscore
+# [2] You Cannot With Num Or Special Characters
+# [3] Can Include (0-9) Or Underscore
+# [4] Cannot Include Special Characters
+# [5] Name is Not Like name [ Case Sensitive ]
+# --------------------------------------
 
-print(type(20)) # int => Intager
+user = "Mostafa" # normal
+userName = "Mostafa" # camelCase
+user_name = "Mostafa" # snake_case
 
-print(type(2.0)) # float => Float
+print(user)
+print(userName)
+print(user_name)
 
-print(type("Mostafa")) # str => String
+x, y, z = 1, 2, 3
 
-print(type(True)) # bool => Boolean
-
-print(type([1, 2, 3])) # list => List
-
-print(type((1, 2, 3))) # tuple => Tuple
-
-print(type({"One": 1, "Two": 2, "Three": 3})) # dict => Dictionary
+print(x)
+print(y)
+print(z)
