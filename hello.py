@@ -2,51 +2,76 @@
 # -- Strings Methods --
 # ---------------------
 
-# split() rsplit()
+# index(SubString, Start, End)
 
-a = "I Love Python and PHP and MySQL"
-print(a.split())
+a = "I Love Python"
+# print(a.index("P"))  # Index Number 7
+# print(a.index("P", 0, 10))  # Index Number 7
+# print(a.index("P", 0, 5))  # Through Error
 
-b = "I-Love-Python-and-PHP-and-MySQL"
-print(b.split("-"))
+# find(SubString, Start, End)
 
-c = "I-Love-Python-and-PHP-and-MySQL"
-print(c.split("-", 3))
+b = "I Love Python"
+print(b.find("P"))  # Index Number 7
+print(b.find("P", 0, 10))  # Index Number 7
+print(b.find("P", 0, 5))  # -1
 
-d = "I-Love-Python-and-PHP-and-MySQL"
-print(d.rsplit("-", 3))
+# rjust(Width, Fill Char) ljust(Width, Fill Char)
 
-# center()
+c = "Osama"
+print(c.rjust(10))
+print(c.rjust(10, "#"))
 
-e = "Osama"
-print(e.center(9))  # Spaces
-print(e.center(9, "#"))  # Hashes
-print(e.center(15, "@"))  # @
+d = "Osama"
+print(d.ljust(10))
+print(d.ljust(10, "#"))
 
-# count()
+# splitlines()
 
-f = "I Love Python and PHP Because PHP is Easy"
-print(f.count("PHP"))  # 2 PHP Words
-print(f.count("PHP", 0, 25))  # Only One PHP Word
+e = """First Line
+Second Line
+Third Line"""
 
-# swapcase()
+print(e.splitlines())
 
-g = "I Love Python"
-h = "i lOVE pYTHON"
+f = "First Line\nSecond Line\nThird Line"
 
-print(g.swapcase())
-print(h.swapcase())
+print(f.splitlines())
 
-# startswith()
+# expandtabs()
 
-i = "I Love Python"
-print(i.startswith("I"))
-print(i.startswith("S"))
-print(i.startswith("P", 7, 12))
+g = "Hello\tWorld\tI\tLove\tPython"
+print(g.expandtabs(2))
 
-# endswith()
+one = "I Love Python And 3G"
+two = "I Love Python And 3g"
+print(one.istitle())
+print(two.istitle())
 
-j = "I Love Python"
-print(j.endswith("n"))
-print(j.endswith("S"))
-print(j.endswith("e", 2, 6))
+three = " "
+four = ""
+print(three.isspace())
+print(four.isspace())
+
+five = 'i love python'
+six = 'I Love Python'
+print(five.islower())
+print(six.islower())
+
+seven = "osama_elzero"
+eight = "OsamaElzero100"
+nine = "Osama--Elzero100"
+
+print(seven.isidentifier())
+print(eight.isidentifier())
+print(nine.isidentifier())
+
+x = "AaaaaBbbbbb"
+y = "AaaaaBbbbbb111"
+print(x.isalpha())
+print(y.isalpha())
+
+u = "AaaaaBbbbbb"
+z = "AaaaaBbbbbb111"
+print(u.isalnum())
+print(z.isalnum())
