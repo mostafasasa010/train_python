@@ -1,26 +1,41 @@
-# --------------------------------------
-# -- Variables --
-# ---------------
-# Syntax => [Variable Name] [Assignment Operator] [Value]
-#
-# Name Convention and Rules
-# [1] Can Start With (a-z A-Z) Or Underscore
-# [2] You Cannot With Num Or Special Characters
-# [3] Can Include (0-9) Or Underscore
-# [4] Cannot Include Special Characters
-# [5] Name is Not Like name [ Case Sensitive ]
-# --------------------------------------
+# ----------------------------
+# Escape Sequences Characters
+# \b => Back Space
+# \newline => Escape New Line + \
+# \\ => Escape Back Slash
+# \' => Escape Single Quotes
+# \" => Escape Double Quotes
+# \n => Line Feed
+# \r => Carriage Return
+# \t => Horizontal Tab
+# \xhh => Character Hex Value
+# ----------------------------
 
-user = "Mostafa" # normal
-userName = "Mostafa" # camelCase
-user_name = "Mostafa" # snake_case
+# Back Space
+print("Hello\bWorld") # Will Remove o
 
-print(user)
-print(userName)
-print(user_name)
+# Escape New Line + Back Slash
+print("Hello \
+I Love \
+Python")
 
-x, y, z = 1, 2, 3
+# Escape Back Slash
+print("I Love Back Slash \\")
 
-print(x)
-print(y)
-print(z)
+# Escape Single Quote
+print('I Love Single Quote \'Test\' ')
+
+# Escape Double Quotes
+print("I Love Double Quotes \"Test\" ")
+
+# Line Feed
+print("Hello World\nSecond Line")
+
+# Carriage Return
+print("123456\rAbcde")
+
+# Horizontal Tab
+print("Hello\tPython")
+
+# Character Hex Value
+print("\x4F\x73")
