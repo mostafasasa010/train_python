@@ -2,55 +2,51 @@
 # -- Strings Methods --
 # ---------------------
 
-# strip() rstrip() lstrip()
+# split() rsplit()
 
-a = "    I Love Python    "
-print(a.strip())
-print(a.rstrip())
-print(a.lstrip())
+a = "I Love Python and PHP and MySQL"
+print(a.split())
 
-a = "#####I Love Python####"
-print(a.strip("#"))
-print(a.rstrip("#"))
-print(a.lstrip("#"))
+b = "I-Love-Python-and-PHP-and-MySQL"
+print(b.split("-"))
 
-a = "@#@#@#I Love Python@#@#@#"
-print(a.strip("@#"))
-print(a.rstrip("@#"))
-print(a.lstrip("@#"))
+c = "I-Love-Python-and-PHP-and-MySQL"
+print(c.split("-", 3))
 
-# title()
+d = "I-Love-Python-and-PHP-and-MySQL"
+print(d.rsplit("-", 3))
 
-b = "I Love 2d Graphics and 3g Technology and python"
-print(b.title())
+# center()
 
-# capitalize()
+e = "Osama"
+print(e.center(9))  # Spaces
+print(e.center(9, "#"))  # Hashes
+print(e.center(15, "@"))  # @
 
-b = "I Love 2d Graphics and 3g Technology and python"
-print(b.capitalize())
+# count()
 
-# zfill
+f = "I Love Python and PHP Because PHP is Easy"
+print(f.count("PHP"))  # 2 PHP Words
+print(f.count("PHP", 0, 25))  # Only One PHP Word
 
-c, d, e, f = "1", "11", "111", "1111"
+# swapcase()
 
-print(c)
-print(d)
-print(e)
-print(f)
+g = "I Love Python"
+h = "i lOVE pYTHON"
 
-print(c.zfill(4))
-print(d.zfill(4))
-print(e.zfill(4))
-print(f.zfill(4))
+print(g.swapcase())
+print(h.swapcase())
 
-# upper()
+# startswith()
 
-g = "osama"
+i = "I Love Python"
+print(i.startswith("I"))
+print(i.startswith("S"))
+print(i.startswith("P", 7, 12))
 
-print(g.upper())
+# endswith()
 
-# lower()
-
-h = "OSama"
-
-print(h.lower())
+j = "I Love Python"
+print(j.endswith("n"))
+print(j.endswith("S"))
+print(j.endswith("e", 2, 6))
