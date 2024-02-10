@@ -1,36 +1,56 @@
-# ---------------------------------
-# Strings Indexing & Slicing
-# [1] All Data in Python is Object
-# [2] Object Contain Elements
-# [3] Every Element Has Its Own Index
-# [4] Python Use Zero Based Indexing ( Index Start From Zero )
-# [5] Use Square Brackets To Access Element
-# [6] Enable Accessing Parts Of Strings, Tuples or Lists
-# ---------------------------------
+# ---------------------
+# -- Strings Methods --
+# ---------------------
 
-# Indexing ( Access Single Item )
+# strip() rstrip() lstrip()
 
-myString = "I Love Python"
+a = "    I Love Python    "
+print(a.strip())
+print(a.rstrip())
+print(a.lstrip())
 
-print(myString[0])  # Index 0 => I
-print(myString[9])  # Index 9 => t
+a = "#####I Love Python####"
+print(a.strip("#"))
+print(a.rstrip("#"))
+print(a.lstrip("#"))
 
-print(myString[-1])  # Index -1 => First Character From End
-print(myString[-6])  # Index -6 => 6th Character From End
+a = "@#@#@#I Love Python@#@#@#"
+print(a.strip("@#"))
+print(a.rstrip("@#"))
+print(a.lstrip("@#"))
 
-# Slicing ( Access Multiple Sequence Items )
-# [Start:End] End Not Included
-# [Start:End:Steps]
+# title()
 
-print(myString[8:11])  # yth
-print(myString[3:5])  # ov
+b = "I Love 2d Graphics and 3g Technology and python"
+print(b.title())
 
-print(myString[:10])  # If Start Is Not Here Will Start From 0 (I Love Pyt)
-print(myString[5:])  # If End Is Not Here Will Go To The End (e Python)
-print(myString[:])  # Full Data
+# capitalize()
 
-print(myString[0::1])  # Full Data
-print(myString[::1])  # Full Data
+b = "I Love 2d Graphics and 3g Technology and python"
+print(b.capitalize())
 
-print(myString[::2])  # Steps
-print(myString[::3])  # Steps
+# zfill
+
+c, d, e, f = "1", "11", "111", "1111"
+
+print(c)
+print(d)
+print(e)
+print(f)
+
+print(c.zfill(4))
+print(d.zfill(4))
+print(e.zfill(4))
+print(f.zfill(4))
+
+# upper()
+
+g = "osama"
+
+print(g.upper())
+
+# lower()
+
+h = "OSama"
+
+print(h.lower())
