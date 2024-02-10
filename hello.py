@@ -1,18 +1,38 @@
-# ---------------------
-# -- Strings Methods --
-# ---------------------
+# ------------------------
+# -- Strings Formatting --
+# ------------------------
 
-# replace(Old Value, New Value, Count)
+name = "Osama"
+age = 36
+rank = 10
 
-a = "Hello One Two Three One One"
-print(a.replace("One", "1"))
-print(a.replace("One", "1", 1))
-print(a.replace("One", "1", 2))
+print("My Name is: " + name)
+# print("My Name is: " + name + " and My Age is: " + age)  # Type Error
 
-# join(Iterable)
+print("My Name is: %s" % "Osama")
+print("My Name is: %s" % name)
+print("My Name is: %s and My Age is: %d" % (name, age))
+print("My Name is: %s and My Age is: %d and My Rank is: %f" % (name, age, rank))
 
-myList = ["Osama", "Mohamed", "Elsayed"]
-print("-".join(myList))
-print(" ".join(myList))
-print(", ".join(myList))
-print(type(", ".join(myList)))
+# %s => String
+# %d => Number
+# %f => Float
+
+n = "Osama"
+l = "Python"
+y = 10
+
+print("My Name is %s Iam %s Developer With %d Years Exp" % (n, l, y))
+
+# Control Floating Point Number
+
+myNumber = 10
+print("My Number is: %d" % myNumber)
+print("My Number is: %f" % myNumber)
+print("My Number is: %.2f" % myNumber)
+
+# Truncate String
+
+myLongString = "Hello Peoples of Elzero Web School I Love You All"
+print("Message is %s" % myLongString)
+print("Message is %.5s" % myLongString) # Slice 5 Chars
