@@ -1,58 +1,29 @@
-# --------------------------
-# -- Arithmetic Operators --
-# --------------------------
-# [+] Addition
-# [-] Subtraction
-# [*] Multiplication
-# [/] Division
-# [%] Modulus
-# [**] Exponent
-# [//] Floor Division
-# --------------------------
+# -----------------------------
+# -- Lists --
+# -----------
+# [1] List Items Are Enclosed in Square Brackets
+# [2] List Are Ordered, To Use Index To Access Item
+# [3] List Are Mutable => Add, Delete, Edit
+# [4] List Items Is Not Unique
+# [5] List Can Have Different Data Types
+# -----------------------------
 
-# Addition
+myAwesomeList = ["One", "Two", "One", 1, 100.5, True]
 
-print(10 + 30)  # 40
-print(-10 + 20)  # 10
-print(1 + 2.66)  # 3.66
-print(1.2 + 1.2)  # 2.4
+print(myAwesomeList)  # Whole List
+print(myAwesomeList[1])  # "Two"
+print(myAwesomeList[-1])  # True
+print(myAwesomeList[-3])  # 1
 
-# Subtraction
+print(myAwesomeList[1:4])  # ['Two', 'One', 1]
+print(myAwesomeList[:4])  # ['One', 'Two', 'One', 1]
+print(myAwesomeList[1:])  # ['Two', 'One', 1, 100.5, True]
 
-print(60 - 30)  # 30
-print(-30 - 20)  # -50
-print(-30 - -20)  # -10
-print(5.66 - 3.44)  # 2.22
+print(myAwesomeList[::1])  # ['One', 'Two', 'One', 1, 100.5, True]
+print(myAwesomeList[::2])  # ['One', 'One', 100.5]
 
-# Multiplication
-
-print(10 * 3)  # 30
-print(5 + 10 * 100)  # 1005
-print((5 + 10) * 100)  # 1500
-
-# Division
-
-print(100 / 20)  # 5.0
-print(int(100 / 20))  # 5
-
-# Modulus
-
-print(8 % 2)  # 0
-print(9 % 2)  # 1
-print(20 % 5)  # 0
-print(22 % 5)  # 2
-
-# Exponent
-
-print(2 ** 5)  # 32
-print(2 * 2 * 2 * 2 * 2)  # 32
-print(5 ** 4)  # 625
-print(5 * 5 * 5 * 5)  # 625
-
-# Floor Division
-
-print(100 // 20)  # 5
-print(119 // 20)  # 5
-print(120 // 20)  # 6
-print(140 // 20)  # 7
-print(142 // 20)  # 7
+print(myAwesomeList)
+# myAwesomeList[1] = 2
+# myAwesomeList[-1] = False
+myAwesomeList[0:3] = ["A"]
+print(myAwesomeList)
