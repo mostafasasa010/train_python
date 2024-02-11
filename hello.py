@@ -1,68 +1,43 @@
-# ---------------------------------
-# -- Strings Formatting New Ways --
-# ---------------------------------
+# -------------
+# -- Numbers --
+# -------------
 
-name = "Osama"
-age = 36
-rank = 10
+# Integer
 
-print("My Name is: " + name)
-# print("My Name is: " + name + " and My Age is: " + age)  # Type Error
+print(type(1))
+print(type(100))
+print(type(10))
+print(type(-10))
+print(type(-110))
 
-print("My Name is: {}".format("Osama"))
-print("My Name is: {}".format(name))
-print("My Name is: {} My Age: {}".format(name, age))
-print("My Name is: {:s} Age: {:d} & Rank is: {:f}".format(name, age, rank))
+# Float
 
-# {:s} => String
-# {:d} => Number
-# {:f} => Float
+print(type(1.500))
+print(type(100.99))
+print(type(-10.99))
+print(type(0.99))
+print(type(-0.99))
 
-n = "Osama"
-l = "Python"
-y = 10
+# Complex
 
-print("My Name is {} Iam {} Developer With {:d} Years Exp".format(n, l, y))
+myComplexNumber = 5+6j
 
-# Control Floating Point Number
+print(type(myComplexNumber))
 
-myNumber = 10
-print("My Number is: {:d}".format(myNumber))
-print("My Number is: {:f}".format(myNumber))
-print("My Number is: {:.2f}".format(myNumber))
+print("Real Part Is: {}".format(myComplexNumber.real))
+print("Imaginary Part Is: {}".format(myComplexNumber.imag))
 
-# Truncate String
+# [1] You Can Convert From Int To Float or Complex
+# [2] You Can Convert From Float To Int or Complex
+# [3] You Cannot Convert Complex To Any Type
 
-myLongString = "Hello Peoples of Elzero Web School I Love You All"
-print("Message is {}".format(myLongString))
-print("Message is {:.5s}".format(myLongString))
-print("Message is {:.13s}".format(myLongString))
+print(100)
+print(float(100))
+print(complex(100))
 
-# Format Money
+print(10.50)
+print(int(10.50))
+print(complex(10.50))
 
-myMoney = 500162350198
-
-print("My Money in Bank Is: {:d}".format(myMoney))
-print("My Money in Bank Is: {:_d}".format(myMoney))
-print("My Money in Bank Is: {:,d}".format(myMoney))
-
-# ReArrange Items
-
-a, b, c = "One", "Two", "Three"
-print("Hello {} {} {}".format(a, b, c))  # Hello One Two Three
-print("Hello {1} {2} {0}".format(a, b, c))  # Hello Two Three One
-print("Hello {2} {0} {1}".format(a, b, c))  # Hello Three One Two
-
-x, y, z = 10, 20, 30
-print("Hello {} {} {}".format(x, y, z))
-print("Hello {1:d} {2:d} {0:d}".format(x, y, z))
-print("Hello {2:f} {0:f} {1:f}".format(x, y, z))
-print("Hello {2:.2f} {0:.4f} {1:.5f}".format(x, y, z))
-
-# Format in Version 3.6+
-
-myName = "Osama"
-myAge = 36
-
-print("My Name is : {myName} and My Age is : {myAge}")
-print(f"My Name is : {myName} and My Age is : {myAge}")
+print(10+9j)
+print(int(10+9j)) # Error
