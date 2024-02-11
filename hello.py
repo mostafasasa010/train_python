@@ -1,60 +1,32 @@
-# -----------
-# -- Tuple --
-# -----------
+# -----------------------------
+# -- Set --
+# ---------
+# [1] Set Items Are Enclosed in Curly Braces
+# [2] Set Items Are Not Ordered And Not Indexed
+# [3] Set Indexing and Slicing Cant Be Done
+# [4] Set Has Only Immutable Data Types (Numbers, Strings, Tuples) List and Dict Are Not
+# [5] Set Items Is Unique
+# -----------------------------
 
-# Tuple With One Element
+# Not Ordered And Not Indexed
 
-myTuple1 = ("Osama",)
-myTuple2 = "Osama",
+mySetOne = {"Osama", "Ahmed", 100}
+print(mySetOne)
+# print(mySetOne[0])
 
-print(myTuple1)
-print(myTuple2)
+# Slicing Cant Be Done
 
-print(type(myTuple1))
-print(type(myTuple2))
+mySetTwo = {1, 2, 3, 4, 5, 6}
+# print(mySetTwo[0:3])
 
-print(len(myTuple1))
-print(len(myTuple2))
+# Has Only Immutable Data Types
 
-# Tuple Concatenation
+# mySetThree = {"Osama", 100, 100.5, True, [1, 2, 3]} # unhashable type: 'list'
+mySetThree = {"Osama", 100, 100.5, True, (1, 2, 3)}
 
-a = (1, 2, 3, 4)
-b = (5, 6)
+print(mySetThree)
 
-c = a + b
-d = a + ("A", "B", True) + b
+# Items Is Unique
 
-print(c)
-print(d)
-
-# Tuple, List, String Repeat (*)
-
-myString = "Osama"
-myList = [1, 2]
-myTuple = ("A", "B")
-
-print(myString * 6)
-print(myList * 6)
-print(myTuple * 6)
-
-# Methods => count()
-
-a = (1, 3, 7, 8, 2, 6, 5, 8)
-print(a.count(8))
-
-# Methods => index()
-
-b = (1, 3, 7, 8, 2, 6, 5)
-# print("The Position of Index Is: " + b.index(7))  # Error
-print("The Position of Index Is: {:d}".format(b.index(7)))
-print(f"The Position of Index Is: {b.index(7)}")
-
-# Tuple Destruct
-
-a = ("A", "B", 4, "C")
-
-x, y, _, z = a
-
-print(x)
-print(y)
-print(z)
+mySetFour = {1, 2, "Osama", "One", "Osama", 1}
+print(mySetFour)
