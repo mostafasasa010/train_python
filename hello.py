@@ -1,45 +1,41 @@
-# -------------------
-# -- Lists Methods --
-# -------------------
+# -----------------------------
+# -- Tuple --
+# -----------
+# [1] Tuple Items Are Enclosed in Parentheses
+# [2] You Can Remove The Parentheses If You Want
+# [3] Tuple Are Ordered, To Use Index To Access Item
+# [4] Tuple Are Immutable => You Cant Add or Delete (The Main Different From List)
+# [5] Tuple Items Is Not Unique
+# [6] Tuple Can Have Different Data Types
+# [7] Operators Used in Strings and Lists Available In Tuples
+# -----------------------------
 
-# clear()
+# Tuple Syntax & Type Test
 
-a = [1, 2, 3, 4]
-a.clear()
-print(a)
+myAwesomeTupleOne = ("Osama", "Ahmed")
+myAwesomeTupleTwo = "Osama", "Ahmed"
 
-# copy()
+print(myAwesomeTupleOne)
+print(myAwesomeTupleTwo)
 
-b = [1, 2, 3, 4]
-c = b.copy()
+print(type(myAwesomeTupleOne))
+print(type(myAwesomeTupleTwo))
 
-print(b)  # Main List
-print(c)  # Copied List
+# Tuple Indexing
 
-b.append(5)
+myAwesomeTupleThree = (1, 2, 3, 4, 5)
+print(myAwesomeTupleThree[0])
+print(myAwesomeTupleThree[-1])
+print(myAwesomeTupleThree[-3])
 
-print(b)  # Main List
-print(c)  # Copied List
+# Tuple Assign Values
 
-# count()
+myAwesomeTupleFour = (1, 2, 3, 4, 5)
+# myAwesomeTupleFour[2] = "Three"
+# print(myAwesomeTupleFour)  # 'tuple' object does not support item assignment
 
-d = [1, 2, 3, 4, 3, 9, 10, 1, 2, 1]
-print(d.count(1))
+# Tuple Data
 
-# index()
-
-e = ["Osama", "Ahmed", "Sayed", "Ramy", "Ahmed", "Ramy"]
-print(e.index("Ramy"))
-
-# insert()
-
-f = [1, 2, 3, 4, 5, "A", "B"]
-f.insert(0, "Test")
-f.insert(-1, "Test")
-
-print(f)
-
-# pop()
-
-g = [1, 2, 3, 4, 5, "A", "B"]
-print(g.pop(-3))
+myAwesomeTupleFive = ("Osama", "Osama", 1, 2, 3, 100.5, True)
+print(myAwesomeTupleFive[1])
+print(myAwesomeTupleFive[-1])
