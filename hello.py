@@ -2,65 +2,60 @@
 # -- Set Methods --
 # -----------------
 
-# clear()
+# difference()
 
-a = {1, 2, 3}
-a.clear()
+a = {1, 2, 3, 4}
+b = {1, 2, 3, "Osama", "Ahmed"}
+print(a)
+print(a.difference(b))  # a - b
 print(a)
 
-# union()
+print("=" * 40)  # Separator
 
-b = {"One", "Two", "Three"}
-c = {"1", "2", "3"}
-x = {"Zero", "Cool"}
+# difference_update()
 
-print(b | c)
-print(b.union(c, x))
+c = {1, 2, 3, 4}
+d = {1, 2, "Osama", "Ahmed"}
+print(c)
+c.difference_update(d)  # c - d
+print(c)
 
-# add()
+print("=" * 40)  # Separator
 
-d = {1, 2, 3, 4}
-d.add(5)
-d.add(6)
-print(d)
+# intersection()
 
-# copy()
-
-e = {1, 2, 3, 4}
-f = e.copy()
-
+e = {1, 2, 3, 4, "X", "Osama"}
+f = {"Osama", "X", 2}
 print(e)
-print(f)
-
-e.add(6)
-
+print(e.intersection(f))  # e & f
 print(e)
-print(f)
 
-# remove()
+print("=" * 40)  # Separator
 
-g = {1, 2, 3, 4}
-g.remove(1)
-# g.remove(7) # Error
+# intersection_update()
+
+g = {1, 2, 3, 4, "X", "Osama"}
+h = {"Osama", "X", 2}
+print(g)
+g.intersection_update(h)  # g & h
 print(g)
 
-# discard()
+print("=" * 40)  # Separator
 
-h = {1, 2, 3, 4}
-h.discard(1)
-h.discard(7)
-print(h)
+# symmetric_difference()
 
-# pop()
+i = {1, 2, 3, 4, 5, "X"}
+j = {"Osama", "Zero", 1, 2, 4, "X"}
+print(i)
+print(i.symmetric_difference(j))  # i ^ j
+print(i)
 
-i = {"A", True, 1, 2, 3, 4, 5}
-print(i.pop())
+print("=" * 40)  # Separator
 
-# update()
+# symmetric_difference_update()
 
-j = {1, 2, 3}
-k = {1, "A", "B", 2}
-j.update(['Html', "Css"])
-j.update(k)
-
-print(j)
+k = {1, 2, 3, 4, 5, "X"}
+l = {"Osama", "Zero", 1, 2, 4, "X"}
+print(k)
+k.symmetric_difference_update(l)  # k ^ l
+print(k)
