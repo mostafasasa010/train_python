@@ -1,34 +1,78 @@
-# -----------------
-# -- Set Methods --
-# -----------------
+# ---------------------------
+# -- Dictionary --
+# ----------------
+# [1] Dict Items Are Enclosed in Curly Braces
+# [2] Dict Items Are Contains Key : Value
+# [3] Dict Key Need To Be Immutable => (Number, String, Tuple) List Not Allowed
+# [4] Dict Value Can Have Any Data Types
+# [5] Dict Key Need To Be Unique
+# [6] Dict Is Not Ordered You Access Its Element With Key
+# ----------------------------
 
-# issuperset()
+# Dictionary
 
-a = {1, 2, 3, 4}
-b = {1, 2, 3}
-c = {1, 2, 3, 4, 5}
+user = {
+  "name": "Osama",
+  "age": 36,
+  "country": "Egypt",
+  "skills": ["Html", "Css", "JS"],
+  "rating": 10.5
+}
 
-print(a.issuperset(b))  # True
-print(a.issuperset(c))  # False
+print(user)
+print(user['country'])
+print(user.get("country"))
 
-print("=" * 50)
+print(user.keys())
+print(user.values())
 
-# issubset()
+# Two-Dimensional Dictionary
 
-d = {1, 2, 3, 4}
-e = {1, 2, 3}
-f = {1, 2, 3, 4, 5}
+languages = {
+  "One": {
+    "name": "Html",
+    "progress": "80%"
+  },
+  "Two": {
+    "name": "Css",
+    "progress": "90%"
+  },
+  "Three": {
+    "name": "Js",
+    "progress": "90%"
+  }
+}
 
-print(d.issubset(e))  # False
-print(d.issubset(f))  # True
+print(languages)
+print(languages['One'])
+print(languages['Three']['name'])
 
-print("=" * 50)
+# Dictionary Length
 
-# isdisjoint()
+print(len(languages))
+print(len(languages["Two"]))
 
-g = {1, 2, 3, 4}
-h = {1, 2, 3}
-i = {10, 11, 12}
+# Create Dictionary From Variables
 
-print(g.isdisjoint(h))  # False
-print(g.isdisjoint(i))  # True
+frameworkOne = {
+  "name": "Vuejs",
+  "progress": "80%"
+}
+
+frameworkTwo = {
+  "name": "ReactJs",
+  "progress": "80%"
+}
+
+frameworkThree = {
+  "name": "Angular",
+  "progress": "80%"
+}
+
+allFramework = {
+  "one": frameworkOne,
+  "two": frameworkTwo,
+  "three": frameworkThree
+}
+
+print(allFramework)
