@@ -2,60 +2,33 @@
 # -- Set Methods --
 # -----------------
 
-# difference()
+# issuperset()
 
 a = {1, 2, 3, 4}
-b = {1, 2, 3, "Osama", "Ahmed"}
-print(a)
-print(a.difference(b))  # a - b
-print(a)
+b = {1, 2, 3}
+c = {1, 2, 3, 4, 5}
 
-print("=" * 40)  # Separator
+print(a.issuperset(b))  # True
+print(a.issuperset(c))  # False
 
-# difference_update()
+print("=" * 50)
 
-c = {1, 2, 3, 4}
-d = {1, 2, "Osama", "Ahmed"}
-print(c)
-c.difference_update(d)  # c - d
-print(c)
+# issubset()
 
-print("=" * 40)  # Separator
+d = {1, 2, 3, 4}
+e = {1, 2, 3}
+f = {1, 2, 3, 4, 5}
 
-# intersection()
+print(d.issubset(e))  # False
+print(d.issubset(f))  # True
 
-e = {1, 2, 3, 4, "X", "Osama"}
-f = {"Osama", "X", 2}
-print(e)
-print(e.intersection(f))  # e & f
-print(e)
+print("=" * 50)
 
-print("=" * 40)  # Separator
+# isdisjoint()
 
-# intersection_update()
+g = {1, 2, 3, 4}
+h = {1, 2, 3}
+i = {10, 11, 12}
 
-g = {1, 2, 3, 4, "X", "Osama"}
-h = {"Osama", "X", 2}
-print(g)
-g.intersection_update(h)  # g & h
-print(g)
-
-print("=" * 40)  # Separator
-
-# symmetric_difference()
-
-i = {1, 2, 3, 4, 5, "X"}
-j = {"Osama", "Zero", 1, 2, 4, "X"}
-print(i)
-print(i.symmetric_difference(j))  # i ^ j
-print(i)
-
-print("=" * 40)  # Separator
-
-# symmetric_difference_update()
-
-k = {1, 2, 3, 4, 5, "X"}
-l = {"Osama", "Zero", 1, 2, 4, "X"}
-print(k)
-k.symmetric_difference_update(l)  # k ^ l
-print(k)
+print(g.isdisjoint(h))  # False
+print(g.isdisjoint(i))  # True
