@@ -1,32 +1,26 @@
-# ---------------
-# -- Nested If --
-# ---------------
+# ----------------------------------
+# -- Ternary Conditional Operator --
+# ----------------------------------
 
-uName = "Osama"
-isStudent = "Yes"
-uCountry = "Egypt"
-cName = "Python Course"
-cPrice = 100
+country = "A"
 
-if uCountry == "Egypt" or uCountry == "KSA" or uCountry == "Qatar":
+if country == "Egypt" : print(f"The Weather in {country} Is 15")
+elif country == "KSA" : print(f"The Weather in {country} Is 30")
+else : print("Country is Not in The List")
 
-  if isStudent == "Yes":
+# Short If
 
-    print(f"Hi {uName} Because U R From {uCountry} And Student")
-    print(f"The Course \"{cName}\" Price Is: ${cPrice - 90}")
+movieRate = 18
+age = 18
 
-  else:
+if age < movieRate :
 
-    print(f"Hi {uName} Because U R From {uCountry}")
-    print(f"The Course \"{cName}\" Price Is: ${cPrice - 80}")
+  print("Movie S Not Good 4U") # Condition If True
 
+else :
 
-elif uCountry == "Kuwait" or uCountry == "Bahrain":
+  print("Movie S Good 4U And Happy Watching") # Condition If False
 
-  print(f"Hi {uName} Because U R From {uCountry}")
-  print(f"The Course \"{cName}\" Price Is: ${cPrice - 50}")
+print("Movie S Not Good 4U" if age < movieRate else "Movie S Good 4U And Happy Watching")
 
-else:
-
-  print(f"Hi {uName} Because U R From {uCountry}")
-  print(f"The Course \"{cName}\" Price Is: ${cPrice - 30}")
+# Condition If True | If Condition | Else | Condition If False
