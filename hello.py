@@ -1,48 +1,75 @@
-# ------------------------
-# -- Dictionary Methods --
-# ------------------------
+# -------------
+# -- Boolean --
+# -------------
+# [1] In Programming You Need to Known Your If Your Code Output is True Or False
+# [2] Boolean Values Are The Two Constant Objects False + True.
+# ---------------------------------------------------------------
 
-# setdefault()
+name = " "
+print(name.isspace())
 
-user = {
-  "name": "Osama"
-}
-print(user)
-print(user.setdefault("age", 36))
-print(user)
+print("=" * 50)
 
-print("=" * 40)
+print(100 > 200)
+print(100 > 100)
+print(100 > 90)
 
-# popitem()
+print("=" * 50)
 
-member = {
-  "name": "Osama",
-  "skill": "PS4"
-}
-print(member)
-member.update({"age": 36})
-print(member.popitem())
+# True Values
 
-print("=" * 40)
+print(bool("Osama"))
+print(bool(100))
+print(bool(100.95))
+print(bool(True))
+print(bool([1, 2, 3, 4, 5]))
 
-# items()
+print("=" * 50)
 
-view = {
-  "name": "Osama",
-  "skill": "XBox"
-}
+# False Values
 
-allItems = view.items()
-print(view)
-view["age"] = 36
+print(bool(0))
+print(bool(""))
+print(bool(''))
+print(bool([]))
+print(bool(False))
+print(bool(()))
+print(bool({}))
+print(bool(None))# -------------
+# -- Boolean --
+# -------------
+# [1] In Programming You Need to Known Your If Your Code Output is True Or False
+# [2] Boolean Values Are The Two Constant Objects False + True.
+# ---------------------------------------------------------------
 
-print(allItems)
+name = " "
+print(name.isspace())
 
-print("=" * 40)
+print("=" * 50)
 
-# fromkeys()
+print(100 > 200)
+print(100 > 100)
+print(100 > 90)
 
-a = ('MyKeyOne', 'MyKeyTwo', 'MyKeyThree')
-b = "X"
+print("=" * 50)
 
-print(dict.fromkeys(a, b))
+# True Values
+
+print(bool("Osama"))
+print(bool(100))
+print(bool(100.95))
+print(bool(True))
+print(bool([1, 2, 3, 4, 5]))
+
+print("=" * 50)
+
+# False Values
+
+print(bool(0))
+print(bool(""))
+print(bool(''))
+print(bool([]))
+print(bool(False))
+print(bool(()))
+print(bool({}))
+print(bool(None))
