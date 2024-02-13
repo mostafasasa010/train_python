@@ -1,13 +1,6 @@
-# ----------------
-# -- User Input --
-# ----------------
+email = input("Enter Your Email: ")
 
-fName = input('What\'s Is Your First Name?')
-mName = input('What\'s Is Your Middle Name?')
-lName = input('What\'s Is Your Last Name?')
+userName = email.strip().split("@")[0]
+emailTag = email.strip().split("@")[1].split(".")[0]
 
-fName = fName.strip().capitalize()
-mName = mName.strip().capitalize()
-lName = lName.strip().capitalize()
-
-print(f"Hello {fName} {mName:.1s} {lName} Happy To See You.")
+print(f"User Name Is {userName}, Email Tag Is {emailTag}")
