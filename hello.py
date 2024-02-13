@@ -1,56 +1,59 @@
-# --------------------------
-# -- Comparison Operators --
-# --------------------------
-# [ == ] Equal
-# [ != ] Not Equal
-# [ > ] Greater Than
-# [ < ] Less Than
-# [ >= ] Greater Than Or Equal
-# [ <= ] Less Than Or Equal
-# --------------------------
+# ---------------------
+# -- Type Conversion --
+# ----------------------
 
-# Equal + Not Equal
+# str()
 
-print(100 == 100)
-print(100 == 200)
-print(100 == 100.00)
+a = 10
+print(type(a))
+print(type(str(a)))
 
 print("#" * 50)
 
-print(100 != 100)
-print(100 != 200)
-print(100 != 100.00)
+# tuple()
+
+c = "Osama"  # String
+d = [1, 2, 3, 4, 5]  # List
+e = {"A", "B", "C"}  # Set
+f = {"A": 1, "B": 2}  # Dictionary
+
+print(tuple(c))
+print(tuple(d))
+print(tuple(e))
+print(tuple(f))
+
+# list()
+
+c = "Osama"  # String
+d = (1, 2, 3, 4, 5)  # Tuple
+e = {"A", "B", "C"}  # Set
+f = {"A": 1, "B": 2}  # Dictionary
+
+print(list(c))
+print(list(d))
+print(list(e))
+print(list(f))
 
 print("#" * 50)
 
-# Greater Than + Less Than
+# set()
 
-print(100 > 100)
-print(100 > 200)
-print(100 > 100.00)
-print(100 > 40)
+c = "Osama"  # String
+d = (1, 2, 3, 4, 5)  # Tuple
+e = ["A", "B", "C"]  # List
+f = {"A": 1, "B": 2}  # Dictionary
 
-print("#" * 50)
-
-print(100 < 100)
-print(100 < 200)
-print(100 < 100.00)
-print(100 < 40)
+print(set(c))
+print(set(d))
+print(set(e))
+print(set(f))
 
 print("#" * 50)
 
-# Greater Than Or Equal + Less Than Or Equal
+# dict()
 
-print(100 >= 100)
-print(100 >= 200)
-print(100 >= 100.00)
-print(100 >= 40)
+d = (("A", 1), ("B", 2), ("C", 3))  # Tuple
+e = [["One", 1], ["Two", 2], ["Three", 3]]  # List
 
-print("#" * 50)
-
-print(100 <= 100)
-print(100 <= 200)
-print(100 <= 100.00)
-print(100 <= 40)
-
-print("#" * 50)
+print(dict(d))
+print(dict(e))
