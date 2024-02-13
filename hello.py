@@ -1,20 +1,23 @@
-# -----------------------
-# -- Boolean Operators --
-# -----------------------
-# and
-# or
-# not
-# -----------------------
+# --------------------------
+# -- Assignment Operators --
+# --------------------------
+# =
+# +=
+# -=
+# *=
+# /=
+# **=
+# %=
+# //=
+# --------------------------
 
-age = 36
-country = "Egypt"
-rank = 10
+x = 10  # Var One
+y = 20  # Var Two
 
-print(age > 16 and country == "Egypt" and rank > 0)  # True
-print(age > 16 and country == "KSA" and rank > 0)  # False
+# Var One = Self [Operator] Var Two
+# Var One [Operator]= Var Two
 
-print(age > 40 or country == "KSA" or rank > 20)  # False
-print(age > 40 or country == "Egypt" or rank > 20)  # True
+# x += y
+x -= y
 
-print(age > 16)  # True
-print(not age > 16)  # Not True = False
+print(x)
