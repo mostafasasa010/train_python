@@ -1,18 +1,30 @@
-age = input("Enter Your Age Years: ")
+# --------------------
+# --  Control Flow  --
+# -- If, Elif, Else --
+# -- Make Decisions --
+# --------------------
 
-age = int(age.strip())
-months = age * 12
-weeks = months * 4
-days = weeks * 7
-hours = days * 24
-minutes = hours * 60
-seconds = minutes * 60
+uName = "Osama"
+uCountry = "Kuwait"
+cName = "Python Course"
+cPrice = 100
 
-print(f"""
-  Your Count Months Is: {months}
-  Your Count Weeks Is: {weeks:,}
-  Your Count Days Is: {days:,}
-  Your Count Hours Is: {hours:,}
-  Your Count Minutes Is: {minutes:,}
-  Your Count Seconds Is: {seconds:,}
-""")
+if uCountry == "Egypt":
+
+  print(f"Hello {uName} Because You Are From {uCountry}")
+  print(f"The Course \"{cName}\" Price Is: ${cPrice - 80}")
+
+elif uCountry == "KSA":
+
+  print(f"Hello {uName} Because You Are From {uCountry}")
+  print(f"The Course \"{cName}\" Price Is: ${cPrice - 60}")
+
+elif uCountry == "Kuwait":
+
+  print(f"Hello {uName} Because You Are From {uCountry}")
+  print(f"The Course \"{cName}\" Price Is: ${cPrice - 50}")
+
+else:
+
+  print(f"Hello {uName} Because You Are From {uCountry}")
+  print(f"The Course \"{cName}\" Price Is: ${cPrice - 30}")
