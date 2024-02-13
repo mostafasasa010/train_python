@@ -1,30 +1,32 @@
-# --------------------
-# --  Control Flow  --
-# -- If, Elif, Else --
-# -- Make Decisions --
-# --------------------
+# ---------------
+# -- Nested If --
+# ---------------
 
 uName = "Osama"
-uCountry = "Kuwait"
+isStudent = "Yes"
+uCountry = "Egypt"
 cName = "Python Course"
 cPrice = 100
 
-if uCountry == "Egypt":
+if uCountry == "Egypt" or uCountry == "KSA" or uCountry == "Qatar":
 
-  print(f"Hello {uName} Because You Are From {uCountry}")
-  print(f"The Course \"{cName}\" Price Is: ${cPrice - 80}")
+  if isStudent == "Yes":
 
-elif uCountry == "KSA":
+    print(f"Hi {uName} Because U R From {uCountry} And Student")
+    print(f"The Course \"{cName}\" Price Is: ${cPrice - 90}")
 
-  print(f"Hello {uName} Because You Are From {uCountry}")
-  print(f"The Course \"{cName}\" Price Is: ${cPrice - 60}")
+  else:
 
-elif uCountry == "Kuwait":
+    print(f"Hi {uName} Because U R From {uCountry}")
+    print(f"The Course \"{cName}\" Price Is: ${cPrice - 80}")
 
-  print(f"Hello {uName} Because You Are From {uCountry}")
+
+elif uCountry == "Kuwait" or uCountry == "Bahrain":
+
+  print(f"Hi {uName} Because U R From {uCountry}")
   print(f"The Course \"{cName}\" Price Is: ${cPrice - 50}")
 
 else:
 
-  print(f"Hello {uName} Because You Are From {uCountry}")
+  print(f"Hi {uName} Because U R From {uCountry}")
   print(f"The Course \"{cName}\" Price Is: ${cPrice - 30}")
