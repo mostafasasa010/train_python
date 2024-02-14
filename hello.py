@@ -1,33 +1,12 @@
-# ----------------------------
-# -- Loop => While Training --
-# ----------------------------
-# while condition_is_true
-#   Code Will Run Until Condition Become False
-# -----------------------
+listOfMovies = []
+countMovies = int(input("Enter Count Save Movies: ").strip())
 
-myF = ["Os", "Ah", "Ga", "Al", "Ra", "Sa", "Ta", "Ma", "Mo", "Wa"]
-
-# print(len(myF))  # List Length [10]
-
-a = 0
-
-while a < len(myF):  # a < 10
-
-  print(f"#{str(a + 1).zfill(3)} {myF[a]}")
-
-  a += 1  # a = a + 1
-
+while countMovies > 0:
+  nameMovie = input("Name Movie: ").strip().capitalize()
+  listOfMovies.append(nameMovie)
+  countMovies -= 1
+  print(f"List Of Movies: {listOfMovies}\nAvilable Places Is: {countMovies}")
 else:
-
-  print("All Friends Printed To Screen.")
-
-# print(myF[0])
-# print(myF[1])
-# print(myF[2])
-# print(myF[3])
-# print(myF[4])
-# print(myF[5])
-# print(myF[6])
-# print(myF[7])
-# print(myF[8])
-# print(myF[9])
+  listOfMovies.sort()
+  print("Thanks Pro :)")
+  print(f"List Movies Is:\n{listOfMovies}")
