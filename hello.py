@@ -1,39 +1,45 @@
-# ---------------------------
-# -- Break, Continue, Pass --
-# ---------------------------
+# ------------------------------
+# -- Advanced Dictionary Loop --
+# ------------------------------
 
-myNumbers = [1, 2, 3, 5, 7, 10, 13, 14, 15, 19]
+mySkills = {
+  "HTML": "80%",
+  "CSS": "90%",
+  "JS": "70%",
+  "PHP": "80%"
+}
 
-# Continue
+print(mySkills.items())
 
-for number in myNumbers:
+#######################
 
-  if number == 13:
+for skill in mySkills:
 
-    continue
+  print(f"{skill} => {mySkills[skill]}")
 
-  print(number)
+#######################
 
-print("#" * 50)
+for skill_key, skill_progress in mySkills.items():
 
-# Break
+  print(f"{skill_key} => {skill_progress}")
 
-for number in myNumbers:
+#######################
 
-  if number == 13:
+myUltimateSkills = {
+  "HTML": {
+    "Main": "80%",
+    "Pugjs": "80%"
+  },
+  "CSS": {
+    "Main": "90%",
+    "Sass": "70%"
+  }
+}
 
-    break
+for main_key, main_value in myUltimateSkills.items():
 
-  print(number)
+  print(f"{main_key} Progress Is: ")
 
-print("#" * 50)
+  for child_key, child_value in main_value.items():
 
-# Pass
-
-for number in myNumbers:
-
-  if number == 13:
-
-    pass
-
-  print(number)
+    print(f"- {child_key} => {child_value}")
