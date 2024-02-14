@@ -1,12 +1,17 @@
-listOfMovies = []
-countMovies = int(input("Enter Count Save Movies: ").strip())
+tries = 3
 
-while countMovies > 0:
-  nameMovie = input("Name Movie: ").strip().capitalize()
-  listOfMovies.append(nameMovie)
-  countMovies -= 1
-  print(f"List Of Movies: {listOfMovies}\nAvilable Places Is: {countMovies}")
+password = "mostafa010"
+
+inputPass = input("Enter Your Password: ")
+
+while inputPass != password:
+  if inputPass == password:
+    break
+  tries -= 1
+  print(f"Wrong Password!, {'Last' if tries == 0 else tries} Avilable Try -_-")
+  inputPass = input("Enter Your Password: ")
+  if tries == 0:
+    print("Wrong Password!\nDon't Have Tries. -_-")
+    break
 else:
-  listOfMovies.sort()
-  print("Thanks Pro :)")
-  print(f"List Movies Is:\n{listOfMovies}")
+  print("Correct. :)")
