@@ -1,32 +1,26 @@
-# -----------------
-# -- Loop => For --
-# --  Trainings  --
-# -----------------
-
-# Range
-
-myRange = range(1, 101)
-
-for number in myRange:
-
-  print(number)
-
-# Dictionary
-
-mySkills = {
-  "Html": "90%",
-  "Css": "60%",
-  "PHP": "70%",
-  "JS": "80%",
-  "Python": "90%",
-  "MySQL": "60%"
+peoples = {
+  "Mostafa": {
+    "Html": "100%",
+    "Css": "90%",
+    "Js": "100%",
+    "Python": "80%",
+  },
+  "Ahmed": {
+    "Html": "100%",
+    "Css": "90%",
+    "Python": "80%",
+    "C++": "90%",
+  },
+  "Ali": {
+    "Html": "100%",
+    "Css": "90%",
+    "PHP": "70%",
+    "C": "50%",
+    "Go": "20%",
+  }
 }
 
-print(mySkills['JS'])
-print(mySkills.get("Python"))
-
-for skill in mySkills:
-
-  # print(skill)
-
-  print(f"My Progress in Lang {skill} Is: {mySkills.get(skill)}")
+for person in peoples:
+    print(f"The {person} Skills Are: ")
+    for skill in peoples[person]:
+      print(f"- Skill Is {skill.upper()}: {peoples[person][skill]} Progress.")
