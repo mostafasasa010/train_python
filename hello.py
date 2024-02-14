@@ -1,26 +1,39 @@
-peoples = {
-  "Mostafa": {
-    "Html": "100%",
-    "Css": "90%",
-    "Js": "100%",
-    "Python": "80%",
-  },
-  "Ahmed": {
-    "Html": "100%",
-    "Css": "90%",
-    "Python": "80%",
-    "C++": "90%",
-  },
-  "Ali": {
-    "Html": "100%",
-    "Css": "90%",
-    "PHP": "70%",
-    "C": "50%",
-    "Go": "20%",
-  }
-}
+# ---------------------------
+# -- Break, Continue, Pass --
+# ---------------------------
 
-for person in peoples:
-    print(f"The {person} Skills Are: ")
-    for skill in peoples[person]:
-      print(f"- Skill Is {skill.upper()}: {peoples[person][skill]} Progress.")
+myNumbers = [1, 2, 3, 5, 7, 10, 13, 14, 15, 19]
+
+# Continue
+
+for number in myNumbers:
+
+  if number == 13:
+
+    continue
+
+  print(number)
+
+print("#" * 50)
+
+# Break
+
+for number in myNumbers:
+
+  if number == 13:
+
+    break
+
+  print(number)
+
+print("#" * 50)
+
+# Pass
+
+for number in myNumbers:
+
+  if number == 13:
+
+    pass
+
+  print(number)
