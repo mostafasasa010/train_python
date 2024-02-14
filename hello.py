@@ -1,34 +1,32 @@
 # -----------------
 # -- Loop => For --
+# --  Trainings  --
 # -----------------
-# for item in iterable_object :
-#   Do Something With Item
-# -----------------------------
-# item Is A Vairable You Create and Call Whenever You Want
-# item refer to the current position and will run and visit all items to the end
-# iterable_object => Sequence [ list, tuples, set, dict, string of charcaters, etc ... ]
-# ---------------------------------------------------------------
 
-myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# Range
 
-for number in myNumbers:
+myRange = range(1, 101)
 
-  # print(number * 17)
+for number in myRange:
 
-  if number % 2 == 0:  # Even
+  print(number)
 
-    print(f"The Number {number} Is Even.")
+# Dictionary
 
-  else:
+mySkills = {
+  "Html": "90%",
+  "Css": "60%",
+  "PHP": "70%",
+  "JS": "80%",
+  "Python": "90%",
+  "MySQL": "60%"
+}
 
-    print(f"The Number {number} Is Odd.")
+print(mySkills['JS'])
+print(mySkills.get("Python"))
 
-else:
+for skill in mySkills:
 
-  print("The Loop Is Finished")
+  # print(skill)
 
-myName = "Osama"
-
-for letter in myName:
-
-  print(f" [ {letter.upper()} ] ")
+  print(f"My Progress in Lang {skill} Is: {mySkills.get(skill)}")
