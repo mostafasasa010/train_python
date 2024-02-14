@@ -1,17 +1,34 @@
-tries = 3
+# -----------------
+# -- Loop => For --
+# -----------------
+# for item in iterable_object :
+#   Do Something With Item
+# -----------------------------
+# item Is A Vairable You Create and Call Whenever You Want
+# item refer to the current position and will run and visit all items to the end
+# iterable_object => Sequence [ list, tuples, set, dict, string of charcaters, etc ... ]
+# ---------------------------------------------------------------
 
-password = "mostafa010"
+myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-inputPass = input("Enter Your Password: ")
+for number in myNumbers:
 
-while inputPass != password:
-  if inputPass == password:
-    break
-  tries -= 1
-  print(f"Wrong Password!, {'Last' if tries == 0 else tries} Avilable Try -_-")
-  inputPass = input("Enter Your Password: ")
-  if tries == 0:
-    print("Wrong Password!\nDon't Have Tries. -_-")
-    break
+  # print(number * 17)
+
+  if number % 2 == 0:  # Even
+
+    print(f"The Number {number} Is Even.")
+
+  else:
+
+    print(f"The Number {number} Is Odd.")
+
 else:
-  print("Correct. :)")
+
+  print("The Loop Is Finished")
+
+myName = "Osama"
+
+for letter in myName:
+
+  print(f" [ {letter.upper()} ] ")
