@@ -1,31 +1,17 @@
-# ----------------------------------------------------
-# -- Function Packing, Unpacking Arguments **KWArgs --
-# ----------------------------------------------------
-
-def show_skills(*skills):
-
-  print(type(skills))
-
-  for skill in skills:
-
-    print(f"{skill}")
-
-show_skills("Html", "CSS", "JS")
+myTuple = ("Html", "CSS", "JS")
 
 mySkills = {
-  'Html': "80%",
-  'Css': "70%",
-  'Js': "50%",
-  'Python': "80%",
-  "Go": "40%"
+  'Go': "80%",
+  'Python': "50%",
+  'MySQL': "80%"
 }
 
-def show_skills(**skills):
+def hello_user(name, *skills, **progSkills):
+  print(f"Hello {name} ^_^\nYour Skills Are:")
+  for skill in skills:
+    print(f"- {skill}")
+  print(f"Your Skills With Progress Are:")
+  for sName, sValue in progSkills.items():
+    print(f"- {sName} => {sValue}")
 
-  print(type(skills))
-
-  for skill, value in skills.items():
-
-    print(f"{skill} => {value}")
-
-show_skills(**mySkills)
+hello_user("Mostafa", *myTuple, **mySkills)
