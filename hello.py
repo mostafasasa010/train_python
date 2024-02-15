@@ -1,49 +1,29 @@
-# ---------------------------------------
-# -- Function Parameters And Arguments --
-# ---------------------------------------
+# -------------------------------------------------
+# -- Function Packing, Unpacking Arguments *Args --
+# -------------------------------------------------
 
-a, b, c = "Osama", "Ahmed", "Sayed"
+print(1, 2, 3, 4)
 
-print(f"Hello {a}")
-print(f"Hello {b}")
-print(f"Hello {c}")
+myList = [1, 2, 3, 5]
 
-# def                     => Function Keyword [Define]
-# say_hello()             => Function Name
-# name                    => Parameter
-# print(f"Hello {name}")  => Task
-# say_hello("Ahmed")      => Ahmed is The Argument
+print(myList)
+print(*myList)
 
-def say_hello(n):
+def say_hello(*peoples):  # n1, n2, n3, n4
 
-  print(f"Hello {n}")
+  for name in peoples:
 
-say_hello(a)
-say_hello(b)
-say_hello(c)
+    print(f"Hello {name}")
 
-def addition(n1, n2):
+say_hello("Osama", "Ahmed", "Sayed", "Mahmoud")
 
-  print(n1 + n2)
+def show_details(name, *skills):
 
-addition(100, 300)
-addition(-50, 100)
+  print(f"Hello {name} Your Skills Is: ")
 
+  for skill in skills:
 
-def addition(n1, n2):
+    print(skill)
 
-  if type(n1) != int or type(n2) != int:
-
-    print("Only Integers Allowed")
-
-  else:
-
-    print(n1 + n2)
-
-addition(100, 500)
-
-def full_name(first, middle, last):
-
-  print(f"Hello {first.strip().capitalize()} {middle.upper():.1s} {last.capitalize()}")
-
-full_name("   osama   ", 'mohamed', "elsayed")
+show_details("Osama", "Html", "CSS", "JS")
+show_details("Ahmed", "Html", "CSS", "JS", "Python", "PHP", "MySQL")
