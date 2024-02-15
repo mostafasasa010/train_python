@@ -1,45 +1,21 @@
-# ------------------------------
-# -- Advanced Dictionary Loop --
-# ------------------------------
+# -------------------------
+# -- Function And Return --
+# -------------------------
+# [1] A Function is A Reusable Block Of Code Do A Task
+# [2] A Function Run When You Call It
+# [3] A Function Accept Element To Deal With Called [Parameters]
+# [4] A Function Can Do The Task Without Returning Data
+# [5] A Function Can Return Data After Job is Finished
+# [6] A Function Create To Prevent DRY
+# [7] A Function Accept Elements When You Call It Called [Arguments]
+# [8] There's A Built-In Functions and User Defined Functions
+# [9] A Function Is For All Team and All Apps
+# ----------------------------------------
 
-mySkills = {
-  "HTML": "80%",
-  "CSS": "90%",
-  "JS": "70%",
-  "PHP": "80%"
-}
+def function_name():
 
-print(mySkills.items())
+  return "Hello Python From Inside Function"
 
-#######################
+dataFromFunction = function_name()
 
-for skill in mySkills:
-
-  print(f"{skill} => {mySkills[skill]}")
-
-#######################
-
-for skill_key, skill_progress in mySkills.items():
-
-  print(f"{skill_key} => {skill_progress}")
-
-#######################
-
-myUltimateSkills = {
-  "HTML": {
-    "Main": "80%",
-    "Pugjs": "80%"
-  },
-  "CSS": {
-    "Main": "90%",
-    "Sass": "70%"
-  }
-}
-
-for main_key, main_value in myUltimateSkills.items():
-
-  print(f"{main_key} Progress Is: ")
-
-  for child_key, child_value in main_value.items():
-
-    print(f"- {child_key} => {child_value}")
+print(dataFromFunction)
