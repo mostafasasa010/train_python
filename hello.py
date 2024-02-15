@@ -1,13 +1,31 @@
-# ---------------------------------
-# -- Function Default Parameters --
-# ---------------------------------
+# ----------------------------------------------------
+# -- Function Packing, Unpacking Arguments **KWArgs --
+# ----------------------------------------------------
 
-def say_hello(name="Unknown", age="Unknown", country="Unknown"):
+def show_skills(*skills):
 
-  print(f"Hello {name} Your Age is {age} and Your Country Is {country}")
+  print(type(skills))
 
-say_hello("Osama", 36, "Egypt")
-say_hello("Mahmoud", 28, "KSA")
-say_hello("Sameh", 38)
-say_hello("Ramy")
-say_hello()
+  for skill in skills:
+
+    print(f"{skill}")
+
+show_skills("Html", "CSS", "JS")
+
+mySkills = {
+  'Html': "80%",
+  'Css': "70%",
+  'Js': "50%",
+  'Python': "80%",
+  "Go": "40%"
+}
+
+def show_skills(**skills):
+
+  print(type(skills))
+
+  for skill, value in skills.items():
+
+    print(f"{skill} => {value}")
+
+show_skills(**mySkills)
