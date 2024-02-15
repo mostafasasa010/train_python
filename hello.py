@@ -1,17 +1,24 @@
-myTuple = ("Html", "CSS", "JS")
+# --------------------
+# -- Function Scope --
+# --------------------
 
-mySkills = {
-  'Go': "80%",
-  'Python': "50%",
-  'MySQL': "80%"
-}
+x = 1  # Global Scope
 
-def hello_user(name, *skills, **progSkills):
-  print(f"Hello {name} ^_^\nYour Skills Are:")
-  for skill in skills:
-    print(f"- {skill}")
-  print(f"Your Skills With Progress Are:")
-  for sName, sValue in progSkills.items():
-    print(f"- {sName} => {sValue}")
+def one():
 
-hello_user("Mostafa", *myTuple, **mySkills)
+  global x
+
+  x = 2
+
+  print(f"Print Variable From Function Scope {x}")
+
+def two():
+
+  x = 10
+
+  print(f"Print Variable From Function Scope {x}")
+
+one()
+print(f"Print Variable From Global Scope {x}")
+two()
+print(f"Print Variable From Global Scope After One Function Is Called {x}")
