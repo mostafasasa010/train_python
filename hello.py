@@ -1,21 +1,49 @@
-# -------------------------
-# -- Function And Return --
-# -------------------------
-# [1] A Function is A Reusable Block Of Code Do A Task
-# [2] A Function Run When You Call It
-# [3] A Function Accept Element To Deal With Called [Parameters]
-# [4] A Function Can Do The Task Without Returning Data
-# [5] A Function Can Return Data After Job is Finished
-# [6] A Function Create To Prevent DRY
-# [7] A Function Accept Elements When You Call It Called [Arguments]
-# [8] There's A Built-In Functions and User Defined Functions
-# [9] A Function Is For All Team and All Apps
-# ----------------------------------------
+# ---------------------------------------
+# -- Function Parameters And Arguments --
+# ---------------------------------------
 
-def function_name():
+a, b, c = "Osama", "Ahmed", "Sayed"
 
-  return "Hello Python From Inside Function"
+print(f"Hello {a}")
+print(f"Hello {b}")
+print(f"Hello {c}")
 
-dataFromFunction = function_name()
+# def                     => Function Keyword [Define]
+# say_hello()             => Function Name
+# name                    => Parameter
+# print(f"Hello {name}")  => Task
+# say_hello("Ahmed")      => Ahmed is The Argument
 
-print(dataFromFunction)
+def say_hello(n):
+
+  print(f"Hello {n}")
+
+say_hello(a)
+say_hello(b)
+say_hello(c)
+
+def addition(n1, n2):
+
+  print(n1 + n2)
+
+addition(100, 300)
+addition(-50, 100)
+
+
+def addition(n1, n2):
+
+  if type(n1) != int or type(n2) != int:
+
+    print("Only Integers Allowed")
+
+  else:
+
+    print(n1 + n2)
+
+addition(100, 500)
+
+def full_name(first, middle, last):
+
+  print(f"Hello {first.strip().capitalize()} {middle.upper():.1s} {last.capitalize()}")
+
+full_name("   osama   ", 'mohamed', "elsayed")
