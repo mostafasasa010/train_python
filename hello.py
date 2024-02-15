@@ -1,24 +1,10 @@
-# --------------------
-# -- Function Scope --
-# --------------------
+# WWWoooorrrldd = World
 
-x = 1  # Global Scope
+def clean_word(word):
+  if len(word) == 1:
+    return word
+  if word[0] == word[1]:
+    return clean_word(word[1:])
+  return word[0] + clean_word(word[1:])
 
-def one():
-
-  global x
-
-  x = 2
-
-  print(f"Print Variable From Function Scope {x}")
-
-def two():
-
-  x = 10
-
-  print(f"Print Variable From Function Scope {x}")
-
-one()
-print(f"Print Variable From Global Scope {x}")
-two()
-print(f"Print Variable From Global Scope After One Function Is Called {x}")
+print(clean_word("WWWoooorrrldd"))
