@@ -1,42 +1,27 @@
-# Assignment from 60 to 64
+# -------------------
+# -- File Handling --
+# -------------------
+# "a" Append  Open File For Appending Values, Create File If Not Exists
+# "r" Read    [Default Value] Open File For Read and Give Error If File is Not Exists
+# "w" Write   Open File For Writing, Create File If Not Exists
+# "x" Create  Create File, Give Error If File Exists
+# --------------------------------------------------
 
-# Assignment Three
-scores_list = {
-  "Math": 90,
-  "Science": 80,
-  "Language": 70
-}
-def get_the_scores(name = None, **scores_list):
-  def scoresLoop(scores_list):
-    for scoreK, scoreV in scores_list.items():
-      print(f"{scoreK} => {scoreV}")
-  if name and scores_list:
-    print(f"Hello {name} This Is Your Score Table:")
-    scoresLoop(scores_list)
-  elif name and scores_list == {}:
-    print(f"Hello {name} You Have No Scores To Show")
-  elif name == None and scores_list:
-    scoresLoop(scores_list)
+# import os
 
-# Test 1
-get_the_scores("Osama", **scores_list)
+# Main Current Working Directory
+# print(os.getcwd())
 
-# Output
-# "Hello Osama This Is Your Score Table:"
-# "Math => 90"
-# "Science => 80"
-# "Language => 70"
+# Directory For The Opened File
+# print(os.path.dirname(os.path.abspath(__file__)))
 
-# Test 2
-get_the_scores("Osama")
+# Change Current Working Directory
+# os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-# Output
-# "Hello Osama You Have No Scores To Show"
+# print(os.getcwd())
 
-# Test 3
-get_the_scores(**scores_list)
+# print(os.path.abspath(__file__))
 
-# Output
-# "Math => 90"
-# "Science => 80"
-# "Language => 70"
+# file = open(r"D:\Python\Files\nfiles\osama.txt")
+
+file = open("D:\Python\Files\osama.txt")
