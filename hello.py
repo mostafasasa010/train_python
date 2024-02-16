@@ -1,36 +1,30 @@
 # ------------------------
 # -- Built In Functions --
 # ------------------------
-# all()
-# any()
-# bin()
-# id()
+# sum()
+# round()
+# range()
+# print()
 # ------------------------
 
-x = [1, 2, 3, 4, []]
+# sum(iterable, start)
+a = [1, 10, 19, 40]
+print(sum(a))
+print(sum(a, 40))
 
-if all(x):
+# round(number, numofdigits)
+print(round(150.501))
+print(round(150.554, 2))
 
-  print("All Elements Is True")
+# range(start, end, step)
+print(list(range(0)))
+print(list(range(10)))
+print(list(range(0, 20, 2)))
 
-else:
+# print()
+print("Hello @ Osama @ How @ Are @ You")
+print("Hello", "Osama", "How", "Are", "You", sep=" | ")
 
-  print("Theres At Least One Element Is False")
-
-x = [0, 0, []]
-
-if any(x):
-
-  print("There's At Least One Element is True")
-
-else:
-
-  print("Theres No Any True Elements")
-
-print(bin(100))
-
-a = 1
-b = 2
-
-print(id(a))
-print(id(b))
+print("First Line", end=" ")
+print("Second Line")
+print("Third Line")
