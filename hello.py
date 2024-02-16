@@ -1,26 +1,41 @@
-# ----------------------------------
-# -- Built In Functions => Reduce --
-# ----------------------------------
-# [1] Reduce Take A Function + Iterator
-# [2] Reduce Run A Function On FIrst and Second Element And Give Result
-# [3] Then Run Function On Result And Third Element
-# [4] Then Run Function On Rsult And Fourth Element And So On
-# [5] Till One ELement is Left And This is The Result of The Reduce
-# [6] The Function Can Be Pre-Defined Function or Lambda Function
-# ---------------------------------------------------------------
+# ------------------------
+# -- Built In Functions --
+# ------------------------
+# enumerate()
+# help()
+# reversed()
+# ------------------------
 
-from functools import reduce
+# enumerate(iterable, start=0)
 
-def sumAll(num1, num2):
+mySkills = ["Html", "Css", "Js", "PHP"]
 
-  return num1 + num2
+mySkillsWithCounter = enumerate(mySkills, 20)
 
-numbers = [1, 8, 2, 9, 100]
+print(type(mySkillsWithCounter))
 
-result = reduce(sumAll, numbers)
+for counter, skill in mySkillsWithCounter:
 
-result = reduce(lambda num1, num2: num1 + num2, numbers)
+  print(f"{counter} - {skill}")
 
-print(result)
+print("#" * 50)
 
-# ((((1 + 8) + 2) + 9) + 100)
+# help()
+
+# print(help(print))
+
+print("#" * 50)
+
+# reversed(iterable)
+
+myString = "Elzero"
+
+print(reversed(myString))
+
+for letter in reversed(myString):
+
+  print(letter)
+
+for s in reversed(mySkills):
+
+  print(s)
