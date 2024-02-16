@@ -1,45 +1,37 @@
-# ------------------------
-# -- Built In Functions --
-# ------------------------
-# abs()
-# pow()
-# min()
-# max()
-# slice()
-# ------------------------
+# -------------------------------
+# -- Built In Functions => Map --
+# -------------------------------
+# [1] Map Take A Function + Iterator
+# [2] Map Called Map Because It Map The Function On Every Element
+# [3] The Function Can Be Pre-Defined Function or Lambda Function
+# ---------------------------------------------------------------
 
-# abs()
-print(abs(100))
-print(abs(-100))
-print(abs(10.19))
-print(abs(-10.19))
+# Use Map With Predefined Function
 
-print("#" * 50)
+def formatText(text):
 
-# pow(base, exp, mod) => Power
-print(pow(2, 5))  # 2 * 2 * 2 * 2 * 2
-print(pow(2, 5, 10))  # (2 * 2 * 2 * 2 * 2) % 10
+  return f"- {text.strip().capitalize()} -"
 
-print("#" * 50)
+myTexts = [" OSama ", "AHMED", "  sAYed  "]
 
-# min(item, item , item, or iterator)
-myNumbers = (1, 20, -50, -100, 100)
-print(min(1, 10, -50, 20, 30))
-print(min("X", "Z", "Osama"))
-print(min(myNumbers))
+myFormatedData = map(formatText, myTexts)
+
+print(myFormatedData)
+
+for name in list(map(formatText, myTexts)):
+
+  print(name)
 
 print("#" * 50)
 
-# max(item, item , item, or iterator)
-myNumbers = (1, 20, -50, -100, 100)
-print(max(1, 10, -50, 20, 30))
-print(max("X", "Z", "Osama"))
-print(max(myNumbers))
+# Use Map With Lambda Function
 
-print("#" * 50)
+def formatText(text):
 
-# slice(start, end, step)
-a = ["A", "B", "C", "D", "E", "F"]
-print(a[:5])
-print(a[slice(5)])
-print(a[slice(2, 5)])
+  return f"- {text.strip().capitalize()} -"
+
+myTexts = [" OSama ", "AHMED", "  sAYed  "]
+
+for name in list(map((lambda text: f"- {text.strip().capitalize()} -"), myTexts)):
+
+  print(name)
