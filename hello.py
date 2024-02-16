@@ -1,17 +1,36 @@
-# -------------------------------------
-# -- File Handling => Important Info --
-# -------------------------------------
+# ------------------------
+# -- Built In Functions --
+# ------------------------
+# all()
+# any()
+# bin()
+# id()
+# ------------------------
 
-# import os
+x = [1, 2, 3, 4, []]
 
-# myFile = open("D:\Python\Files\osama.txt", "a")
-# myFile.truncate(5)
+if all(x):
 
-# myFile = open("D:\Python\Files\osama.txt", "a")
-# print(myFile.tell())
+  print("All Elements Is True")
 
-# myFile = open("D:\Python\Files\osama.txt", "r")
-# myFile.seek(11)
-# print(myFile.read())
+else:
 
-# os.remove("D:\Python\Files\osama.txt")
+  print("Theres At Least One Element Is False")
+
+x = [0, 0, []]
+
+if any(x):
+
+  print("There's At Least One Element is True")
+
+else:
+
+  print("Theres No Any True Elements")
+
+print(bin(100))
+
+a = 1
+b = 2
+
+print(id(a))
+print(id(b))
