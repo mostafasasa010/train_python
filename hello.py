@@ -1,30 +1,45 @@
 # ------------------------
 # -- Built In Functions --
 # ------------------------
-# sum()
-# round()
-# range()
-# print()
+# abs()
+# pow()
+# min()
+# max()
+# slice()
 # ------------------------
 
-# sum(iterable, start)
-a = [1, 10, 19, 40]
-print(sum(a))
-print(sum(a, 40))
+# abs()
+print(abs(100))
+print(abs(-100))
+print(abs(10.19))
+print(abs(-10.19))
 
-# round(number, numofdigits)
-print(round(150.501))
-print(round(150.554, 2))
+print("#" * 50)
 
-# range(start, end, step)
-print(list(range(0)))
-print(list(range(10)))
-print(list(range(0, 20, 2)))
+# pow(base, exp, mod) => Power
+print(pow(2, 5))  # 2 * 2 * 2 * 2 * 2
+print(pow(2, 5, 10))  # (2 * 2 * 2 * 2 * 2) % 10
 
-# print()
-print("Hello @ Osama @ How @ Are @ You")
-print("Hello", "Osama", "How", "Are", "You", sep=" | ")
+print("#" * 50)
 
-print("First Line", end=" ")
-print("Second Line")
-print("Third Line")
+# min(item, item , item, or iterator)
+myNumbers = (1, 20, -50, -100, 100)
+print(min(1, 10, -50, 20, 30))
+print(min("X", "Z", "Osama"))
+print(min(myNumbers))
+
+print("#" * 50)
+
+# max(item, item , item, or iterator)
+myNumbers = (1, 20, -50, -100, 100)
+print(max(1, 10, -50, 20, 30))
+print(max("X", "Z", "Osama"))
+print(max(myNumbers))
+
+print("#" * 50)
+
+# slice(start, end, step)
+a = ["A", "B", "C", "D", "E", "F"]
+print(a[:5])
+print(a[slice(5)])
+print(a[slice(2, 5)])
