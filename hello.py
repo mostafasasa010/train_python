@@ -1,27 +1,33 @@
-# -------------------
-# -- File Handling --
-# -------------------
-# "a" Append  Open File For Appending Values, Create File If Not Exists
-# "r" Read    [Default Value] Open File For Read and Give Error If File is Not Exists
-# "w" Write   Open File For Writing, Create File If Not Exists
-# "x" Create  Create File, Give Error If File Exists
-# --------------------------------------------------
+# --------------------------------
+# -- File Handling => Read File --
+# --------------------------------
 
-# import os
+# myFile = open("D:\Python\Files\osama.txt", "r")
 
-# Main Current Working Directory
-# print(os.getcwd())
+# print(myFile)  # File Data Object
+# print(myFile.name)
+# print(myFile.mode)
+# print(myFile.encoding)
 
-# Directory For The Opened File
-# print(os.path.dirname(os.path.abspath(__file__)))
+# print(myFile.read())
+# print(myFile.read(5))
 
-# Change Current Working Directory
-# os.chdir(os.path.dirname(os.path.abspath(__file__)))
+# print(myFile.readline(5))
+# print(myFile.readline())
+# print(myFile.readline())
 
-# print(os.getcwd())
+# print(myFile.readlines())
+# print(myFile.readlines(50))
+# print(type(myFile.readlines()))
 
-# print(os.path.abspath(__file__))
+# for line in myFile:
 
-# file = open(r"D:\Python\Files\nfiles\osama.txt")
+#   print(line)
 
-file = open("D:\Python\Files\osama.txt")
+#   if line.startswith("07"):
+
+#     break
+
+# # Close The File
+
+# myFile.close()
