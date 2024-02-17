@@ -1,24 +1,14 @@
-def show_skills(name, *skills):
-  if len(skills) > 1:
-    print(f"Hello {name} Your Skills Is")
-    for skill in skills:
-      print(f"- {skill}")
-  else:
-    print(f"Hello {name} You Have No Skills To Show")
-
+def say_hello(name = "Unknown", age = "Unknown", country = "Unknown"):
+  return f"Hello {name} Your Age Is {age} And You Live In {country}"
 
 # Input
-show_skills("Osama", "HTML", "CSS", "JS", "Python")
+print(say_hello("Osama", 38, "Egypt"))
 
 # Output
-# "Hello Osama Your Skills Is"
-# "- HTML"
-# "- CSS"
-# "- JS"
-# "- Python"
+# "Hello Osama Your Age Is 38 And You Live In Egypt"
 
 # Input
-show_skills("Ahmed")
+print(say_hello())
 
 # Output
-# "Hello Ahmed You Have No Skills To Show"
+# "Hello Unknown Your Age Is Unknown And You Live In Unknown"
