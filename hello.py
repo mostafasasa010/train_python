@@ -1,10 +1,20 @@
-from functools import reduce
+skills = ("HTML", "CSS", 10, "PHP", "Python", 20, "JavaScript")
+i = 0
 
-nums = [2, 4, 6, 2]
+def reverseTuple(t):
+  newTuple = t[::-1]
+  return newTuple
 
-num = reduce(lambda n1, n2: n1 * n2, nums)
+newSkills = reverseTuple(skills)
 
-print(num)
+while i < len(newSkills):
+  if type(newSkills[i]) == str:
+    print(f"{newSkills.index(newSkills[i]) + 50} - {newSkills[i]}")
+  i += 1
 
 # Output
-# 96
+# "50 - JavaScript"
+# "52 - Python"
+# "53 - PHP"
+# "55 - CSS"
+# "56 - HTML"
