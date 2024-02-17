@@ -1,30 +1,76 @@
 # Input
-my_ranks = {
-  'Math': 'A',
-  "Science": 'B',
-  'Drawing': 'A',
-  'Sports': 'C'
+students = {
+  "Ahmed": {
+    "Math": "A",
+    "Science": "D",
+    "Draw": "B",
+    "Sports": "C",
+    "Thinking": "A"
+  },
+  "Sayed": {
+    "Math": "B",
+    "Science": "B",
+    "Draw": "B",
+    "Sports": "D",
+    "Thinking": "A"
+  },
+  "Mahmoud": {
+    "Math": "D",
+    "Science": "A",
+    "Draw": "A",
+    "Sports": "B",
+    "Thinking": "B"
+  }
 }
-result = 0
 
-for rankKey, rankValue in my_ranks.items():
-  val = 0
-  if rankValue == "A":
-    result += 100
-    val = 100
-  elif rankValue == "B":
-    result += 80
-    val = 80
-  elif rankValue == "C":
-    result += 40
-    val = 40
-  print(f"My Rank in {rankKey} Is {rankValue} And This Equal {val} Points")
-else:
-  print(f"Total Points Is {result}")
+for studentName, studentVals in students.items():
+  re = 0
+  print("------------------------------")
+  print(f"-- Student name => {studentName}")
+  print("------------------------------")
+  for key, vla in studentVals.items():
+    r = 0
+    if vla == "A":
+      r = 100
+      re += 100
+    elif vla == "B":
+      r = 80
+      re += 80
+    elif vla == "C":
+      r = 40
+      re += 40
+    elif vla == "D":
+      r = 20
+      re += 20
+    print(f"- {key} => {r} Points")
+  else:
+    print(f"Total Points For {studentName} Is {re}")
 
 # Needed Output
-# "My Rank in Math Is A And This Equal 100 Points"
-# "My Rank in Science Is B And This Equal 80 Points"
-# "My Rank in Drawing Is A And This Equal 100 Points"
-# "My Rank in Sports Is C And This Equal 40 Points"
-# "Total Points Is 320"
+# "------------------------------"
+# "-- Student Name => Ahmed"
+# "------------------------------"
+# "- Math => 100 Points"
+# "- Science => 20 Points"
+# "- Draw => 80 Points"
+# "- Sports => 40 Points"
+# "- Thinking => 100 Points"
+# "Total Points For Ahmed Is 340"
+# "------------------------------"
+# "-- Student Name => Sayed"
+# "------------------------------"
+# "- Math => 80 Points"
+# "- Science => 80 Points"
+# "- Draw => 80 Points"
+# "- Sports => 20 Points"
+# "- Thinking => 100 Points"
+# "Total Points For Sayed Is 360"
+# "------------------------------"
+# "-- Student Name => Mahmoud"
+# "------------------------------"
+# "- Math => 20 Points"
+# "- Science => 100 Points"
+# "- Draw => 100 Points"
+# "- Sports => 80 Points"
+# "- Thinking => 80 Points"
+# "Total Points For Mahmoud Is 380"
