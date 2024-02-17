@@ -1,20 +1,23 @@
-skills = ("HTML", "CSS", 10, "PHP", "Python", 20, "JavaScript")
-i = 0
+def calculate(n1, n2, calc = "add"):
+  calc = calc.lower()
+  if calc == "add" or calc == "a" or not calc:
+    return n1 + n2 
+  elif calc == "subtract" or calc == "s":
+    return n1 - n2
+  elif calc == "multiply" or calc == "m":
+    return n1 * n2
+  else:
+    return f"{calc} Not Valid"
 
-def reverseTuple(t):
-  newTuple = t[::-1]
-  return newTuple
 
-newSkills = reverseTuple(skills)
+# Tests
+print(calculate(10, 20)) # 30
+print(calculate(10, 20, "AdD")) # 30
+print(calculate(10, 20, "a")) # 30
+print(calculate(10, 20, "A")) # 30
 
-while i < len(newSkills):
-  if type(newSkills[i]) == str:
-    print(f"{newSkills.index(newSkills[i]) + 50} - {newSkills[i]}")
-  i += 1
+print(calculate(10, 20, "S")) # -10
+print(calculate(10, 20, "subTRACT")) # -10
 
-# Output
-# "50 - JavaScript"
-# "52 - Python"
-# "53 - PHP"
-# "55 - CSS"
-# "56 - HTML"
+print(calculate(10, 20, "Multiply")) # 200
+print(calculate(10, 20, "m")) # 200
