@@ -1,13 +1,12 @@
-friends_map = ["AEmanS", "AAhmedS", "DSamehF", "LOsamaL"]
-cleaned = []
+friends_filter = ["Osama", "Wessam", "Amal", "Essam", "Gamal", "Othman"]
+names = []
 
-for text in list(map(lambda li: li[1:-1], friends_map)):
-  cleaned.append(text)
+for name in list(filter(lambda text: text[-1] == "m", friends_filter)):
+  names.append(name)
 
-print(cleaned)
+for name in names:
+  print(name)
 
 # Output
-# "Eman"
-# "Ahmed"
-# "Sameh"
-# "Osama"
+# "Wessam"
+# "Essam"
