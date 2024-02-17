@@ -1,16 +1,28 @@
-# Input
-my_nums = [15, 81, 5, 17, 20, 21, 13]
 i = 1
-
-for num in sorted(my_nums, reverse=True):
-  if num % 5 == 0:
-    print(f"{i} => {num}")
+while i <= 20:
+  if i == 6 or i == 8 or i == 12:
     i += 1
+  print(f"0{i}" if i < 10 else f"{i}")
+  i += 1
 else:
   print("All Numbers Printed")
 
 # Needed Output
-# "1 => 20"
-# "2 => 15"
-# "3 => 5"
+# "01"
+# "02"
+# "03"
+# "04"
+# "05"
+# "07"
+# "09"
+# "10"
+# "11"
+# "13"
+# "14"
+# "15"
+# "16"
+# "17"
+# "18"
+# "19"
+# "20"
 # "All Numbers Printed"
