@@ -1,12 +1,10 @@
-friends_filter = ["Osama", "Wessam", "Amal", "Essam", "Gamal", "Othman"]
-names = []
+from functools import reduce
 
-for name in list(filter(lambda text: text[-1] == "m", friends_filter)):
-  names.append(name)
+nums = [2, 4, 6, 2]
 
-for name in names:
-  print(name)
+num = reduce(lambda n1, n2: n1 * n2, nums)
+
+print(num)
 
 # Output
-# "Wessam"
-# "Essam"
+# 96
