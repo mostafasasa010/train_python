@@ -1,14 +1,16 @@
-def say_hello(name = "Unknown", age = "Unknown", country = "Unknown"):
-  return f"Hello {name} Your Age Is {age} And You Live In {country}"
-
 # Input
-print(say_hello("Osama", 38, "Egypt"))
+my_nums = [15, 81, 5, 17, 20, 21, 13]
+i = 1
 
-# Output
-# "Hello Osama Your Age Is 38 And You Live In Egypt"
+for num in sorted(my_nums, reverse=True):
+  if num % 5 == 0:
+    print(f"{i} => {num}")
+    i += 1
+else:
+  print("All Numbers Printed")
 
-# Input
-print(say_hello())
-
-# Output
-# "Hello Unknown Your Age Is Unknown And You Live In Unknown"
+# Needed Output
+# "1 => 20"
+# "2 => 15"
+# "3 => 5"
+# "All Numbers Printed"
