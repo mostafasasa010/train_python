@@ -1,16 +1,24 @@
-def addition(*nums):
-  re = 0
-  i = 0
-  while i < len(nums):
-    if nums[i] == 10:
-      i += 1
-    if nums[i] != 5:
-      re += nums[i]
-    else:
-      re -= nums[i]
-    i += 1
-  return re
+def show_skills(name, *skills):
+  if len(skills) > 1:
+    print(f"Hello {name} Your Skills Is")
+    for skill in skills:
+      print(f"- {skill}")
+  else:
+    print(f"Hello {name} You Have No Skills To Show")
 
-# Tests
-print(addition(10, 20, 30, 10, 15)) # 65
-print(addition(10, 20, 30, 10, 15, 5, 100)) # 160
+
+# Input
+show_skills("Osama", "HTML", "CSS", "JS", "Python")
+
+# Output
+# "Hello Osama Your Skills Is"
+# "- HTML"
+# "- CSS"
+# "- JS"
+# "- Python"
+
+# Input
+show_skills("Ahmed")
+
+# Output
+# "Hello Ahmed You Have No Skills To Show"
