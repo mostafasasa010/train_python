@@ -1,38 +1,20 @@
-# -----------------------------------
-# -- Modules => Create Your Module --
-# -----------------------------------
+# ------------------------------------------
+# -- Modules => Install External Packages --
+# ------------------------------------------
+# [1] Module vs Package
+# [2] External Packages Downloaded From The Internet
+# [3] You Can Install Packages With Python Package Manager PIP
+# [4] PIP Install the Package and Its Dependencies
+# [5] Modules List "https://docs.python.org/3/py-modindex.html"
+# [6] Packages and Modules Directory "https://pypi.org/"
+# [7] PIP Manual "https://pip.pypa.io/en/stable/reference/pip_install/"
+# ---------------------------------------------------------------------
 
-# import sys
-# sys.path.append(r"D:\Games")
-# print(sys.path)
+# import termcolor
+# import pyfiglet
 
-# import elzero
-# print(dir(elzero))
+# print(dir(pyfiglet))
+# print(pyfiglet.figlet_format("Elzero"))
+# print(termcolor.colored("Elzero", color="yellow"))
 
-# elzero.sayHello("Ahmed")
-# elzero.sayHello("Osama")
-# elzero.sayHello("Mohamed")
-
-# elzero.sayHowAreYou("Ahmed")
-# elzero.sayHowAreYou("Osama")
-# elzero.sayHowAreYou("Mohamed")
-
-# # Alias
-
-# import elzero as ee
-
-# ee.sayHello("Ahmed")
-# ee.sayHello("Osama")
-# ee.sayHello("Mohamed")
-
-# ee.sayHowAreYou("Ahmed")
-# ee.sayHowAreYou("Osama")
-# ee.sayHowAreYou("Mohamed")
-
-# from elzero import sayHello
-
-# sayHello("Osama")
-
-# from elzero import sayHello as ss
-
-# ss("Osama")
+# print(termcolor.colored(pyfiglet.figlet_format("Elzero"), color="yellow"))
