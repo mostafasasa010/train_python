@@ -1,43 +1,34 @@
-# -------------------------
-# -- Decorators => Intro --
-# -------------------------
-# [1] Sometimes Called Meta Programming
-# [2] Everything in Python is Object Even Functions
-# [3] Decorator Take A Function and Add Some Functionality and Return It
-# [4] Decorator Wrap Other Function and Enhance Their Behaviour
-# [5] Decorator is Higher Order Function (Function Accept Function As Parameter)
-# ----------------------------------------------------------------------
+# --------------------------------------------
+# -- Decorators => Function With Parameters --
+# --------------------------------------------
 
 def myDecorator(func):  # Decorator
 
-  def nestedFunc():  # Any Name Its Just For Decoration
+  def nestedFunc(num1, num2):  # Any Name Its Just For Decoration
 
-    print("Before")  # Message From Decorator
+    if num1 < 0 or num2 < 0:
 
-    func()  # Execute Function
+      print("Beware One Of The Numbers Is Less Than Zero")
 
-    print("After")  # Message From Decorator
+    func(num1, num2)  # Execute Function
+
+  return nestedFunc  # Return All Data
+
+def myDecoratorTwo(func):  # Decorator
+
+  def nestedFunc(num1, num2):  # Any Name Its Just For Decoration
+
+    print("Coming From Decorator Two")
+
+    func(num1, num2)  # Execute Function
 
   return nestedFunc  # Return All Data
 
 @myDecorator
+@myDecoratorTwo
 
-def sayHello():
+def calculate(n1, n2):
 
-  print("Hello From Say Hello Function")
+  print(n1 + n2)
 
-@myDecorator
-
-def sayHowAreYou():
-
-  print("Hello From Say How Are You Function")
-
-afterDecoration = myDecorator(sayHello)
-
-afterDecoration()
-
-sayHello()
-
-print("#" * 50)
-
-sayHowAreYou()
+calculate(-5, 90)
