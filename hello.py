@@ -1,24 +1,43 @@
-# ----------------
-# -- Generators --
-# ----------------
-# [1] Generator is a Function With "yield" Keyword Instead of "return"
-# [2] It Support Iteration and Return Generator Iterator By Calling "yield"
-# [3] Generator Function Can Have one or More "yield"
-# [4] By Using next() It Resume From Where It Called "yield" Not From Begining
-# [5] When Called, Its Not Start Automatically, Its Only Give You The Control
-# -----------------------------------------------------------------
+# -------------------------
+# -- Decorators => Intro --
+# -------------------------
+# [1] Sometimes Called Meta Programming
+# [2] Everything in Python is Object Even Functions
+# [3] Decorator Take A Function and Add Some Functionality and Return It
+# [4] Decorator Wrap Other Function and Enhance Their Behaviour
+# [5] Decorator is Higher Order Function (Function Accept Function As Parameter)
+# ----------------------------------------------------------------------
 
-def myGenerator():
-  yield 1
-  yield 2
-  yield 3
-  yield 4
+def myDecorator(func):  # Decorator
 
-myGen = myGenerator()
+  def nestedFunc():  # Any Name Its Just For Decoration
 
-print(next(myGen), end=" ")
-print("Hello From Python")
-print(next(myGen), end=" ")
+    print("Before")  # Message From Decorator
 
-for number in myGen:
-  print(number)
+    func()  # Execute Function
+
+    print("After")  # Message From Decorator
+
+  return nestedFunc  # Return All Data
+
+@myDecorator
+
+def sayHello():
+
+  print("Hello From Say Hello Function")
+
+@myDecorator
+
+def sayHowAreYou():
+
+  print("Hello From Say How Are You Function")
+
+afterDecoration = myDecorator(sayHello)
+
+afterDecoration()
+
+sayHello()
+
+print("#" * 50)
+
+sayHowAreYou()
