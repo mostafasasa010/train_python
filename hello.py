@@ -1,38 +1,24 @@
-# --------------------------
-# -- Iterable vs Iterator --
-# --------------------------
-# Iterable
-# [1] Object Contains Data That Can Be Iterated Upon
-# [2] Examples (String, List, Set, Tuple, Dictionary)
-# ------------------------------------------
-# Iterator
-# [1] Object Used To Iterate Over Iterable Using next() Method Return 1 Element At A Time
-# [2] You Can Generate Iterator From Iterable When Using iter() Method
-# [3] For Loop Already Calls iter() Method on The Iterable Behind The Scene
-# [4] Gives "StopIteration" If Theres No Next Element
-# -----------------------------------------------------------
+# ----------------
+# -- Generators --
+# ----------------
+# [1] Generator is a Function With "yield" Keyword Instead of "return"
+# [2] It Support Iteration and Return Generator Iterator By Calling "yield"
+# [3] Generator Function Can Have one or More "yield"
+# [4] By Using next() It Resume From Where It Called "yield" Not From Begining
+# [5] When Called, Its Not Start Automatically, Its Only Give You The Control
+# -----------------------------------------------------------------
 
-myString = "Osama"
+def myGenerator():
+  yield 1
+  yield 2
+  yield 3
+  yield 4
 
-myList = [1, 2, 3, 4, 5]
+myGen = myGenerator()
 
-for letter in myString:
+print(next(myGen), end=" ")
+print("Hello From Python")
+print(next(myGen), end=" ")
 
-  print(letter, end=" ")
-
-for number in myList:
-
-  print(number, end=" ")
-
-myIterator = iter(myString)
-
-print(next(myIterator))
-print(next(myIterator))
-print(next(myIterator))
-print(next(myIterator))
-print(next(myIterator))
-# print(next(myIterator)) #  Error
-
-for letter in iter("Elzero"):
-
-  print(letter, end=" ")
+for number in myGen:
+  print(number)
